@@ -4,7 +4,7 @@
 //
 //  Created by Sinclair on 4/5/16.
 //  Copyright © 2016 Sinclair. All rights reserved.
-//  App Icon from Edward Boatman
+//  Icon from Edward Boatman
 
 import UIKit
 

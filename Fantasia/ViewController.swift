@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     var current = 0;
     
+    @IBOutlet weak var sadFace: UIImageView!
+    @IBOutlet weak var happyFace: UIImageView!
     @IBOutlet weak var currentImage: UIImageView!
 
     @IBOutlet weak var ratingSlider: UISlider!
@@ -46,11 +48,15 @@ class ViewController: UIViewController {
         loadData()
         currentImage.hidden = true
         ratingSlider.hidden = true
+        happyFace.hidden = true
+        sadFace.hidden = true
     }
     
     func run(){
         currentImage.hidden = true
         beginButton.hidden = true
+        happyFace.hidden = true
+        sadFace.hidden = true
         ratingSlider.hidden = true
         var currentTime:Double = CACurrentMediaTime()
         auditoryStimuli[current].player.play()
@@ -59,12 +65,13 @@ class ViewController: UIViewController {
         auditoryStimuli[current].player.stop()
         print(visualStimuli[current].image)
         currentImage.hidden = false
-        currentImage.image = UIImage(named: "image0.jpeg")
-        print("Visual stimuli rating: \(visualStimuli[current].imageRating)")
+        currentImage.image = visualStimuli[current].image
         currentTime = CACurrentMediaTime()
         //show visual stimuli for 1 second
         while((CACurrentMediaTime()-currentTime) < 1.0){}
         currentImage.hidden = true
+        happyFace.hidden = false
+        sadFace.hidden = false
         ratingSlider.hidden = false
     }
     
