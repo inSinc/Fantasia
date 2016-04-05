@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CDDB7341CB36FE600B58D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7331CB36FE600B58D4C /* AppDelegate.swift */; };
+		1CDDB7361CB36FE600B58D4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7351CB36FE600B58D4C /* ViewController.swift */; };
+		1CDDB7391CB36FE600B58D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB7371CB36FE600B58D4C /* Main.storyboard */; };
+		1CDDB73B1CB36FE600B58D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB73A1CB36FE600B58D4C /* Assets.xcassets */; };
+		1CDDB73E1CB36FE700B58D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB73C1CB36FE700B58D4C /* LaunchScreen.storyboard */; };
+		1CDDB7491CB36FE700B58D4C /* FantasiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7481CB36FE700B58D4C /* FantasiaTests.swift */; };
+		1CDDB7541CB36FE700B58D4C /* FantasiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7531CB36FE700B58D4C /* FantasiaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CDDB7451CB36FE700B58D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CDDB7281CB36FE600B58D4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CDDB72F1CB36FE600B58D4C;
+			remoteInfo = Fantasia;
+		};
+		1CDDB7501CB36FE700B58D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CDDB7281CB36FE600B58D4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CDDB72F1CB36FE600B58D4C;
+			remoteInfo = Fantasia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CDDB7301CB36FE600B58D4C /* Fantasia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fantasia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CDDB7331CB36FE600B58D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1CDDB7351CB36FE600B58D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CDDB7381CB36FE600B58D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CDDB73A1CB36FE600B58D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CDDB73D1CB36FE700B58D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1CDDB73F1CB36FE700B58D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CDDB7441CB36FE700B58D4C /* FantasiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CDDB7481CB36FE700B58D4C /* FantasiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasiaTests.swift; sourceTree = "<group>"; };
+		1CDDB74A1CB36FE700B58D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CDDB74F1CB36FE700B58D4C /* FantasiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CDDB7531CB36FE700B58D4C /* FantasiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasiaUITests.swift; sourceTree = "<group>"; };
+		1CDDB7551CB36FE700B58D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CDDB72D1CB36FE600B58D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CDDB7411CB36FE700B58D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CDDB74C1CB36FE700B58D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CDDB7271CB36FE600B58D4C = {
+			isa = PBXGroup;
+			children = (
+				1CDDB7321CB36FE600B58D4C /* Fantasia */,
+				1CDDB7471CB36FE700B58D4C /* FantasiaTests */,
+				1CDDB7521CB36FE700B58D4C /* FantasiaUITests */,
+				1CDDB7311CB36FE600B58D4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CDDB7311CB36FE600B58D4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CDDB7301CB36FE600B58D4C /* Fantasia.app */,
+				1CDDB7441CB36FE700B58D4C /* FantasiaTests.xctest */,
+				1CDDB74F1CB36FE700B58D4C /* FantasiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CDDB7321CB36FE600B58D4C /* Fantasia */ = {
+			isa = PBXGroup;
+			children = (
+				1CDDB7331CB36FE600B58D4C /* AppDelegate.swift */,
+				1CDDB7351CB36FE600B58D4C /* ViewController.swift */,
+				1CDDB7371CB36FE600B58D4C /* Main.storyboard */,
+				1CDDB73A1CB36FE600B58D4C /* Assets.xcassets */,
+				1CDDB73C1CB36FE700B58D4C /* LaunchScreen.storyboard */,
+				1CDDB73F1CB36FE700B58D4C /* Info.plist */,
+			);
+			path = Fantasia;
+			sourceTree = "<group>";
+		};
+		1CDDB7471CB36FE700B58D4C /* FantasiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CDDB7481CB36FE700B58D4C /* FantasiaTests.swift */,
+				1CDDB74A1CB36FE700B58D4C /* Info.plist */,
+			);
+			path = FantasiaTests;
+			sourceTree = "<group>";
+		};
+		1CDDB7521CB36FE700B58D4C /* FantasiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1CDDB7531CB36FE700B58D4C /* FantasiaUITests.swift */,
+				1CDDB7551CB36FE700B58D4C /* Info.plist */,
+			);
+			path = FantasiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CDDB72F1CB36FE600B58D4C /* Fantasia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CDDB7581CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "Fantasia" */;
+			buildPhases = (
+				1CDDB72C1CB36FE600B58D4C /* Sources */,
+				1CDDB72D1CB36FE600B58D4C /* Frameworks */,
+				1CDDB72E1CB36FE600B58D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fantasia;
+			productName = Fantasia;
+			productReference = 1CDDB7301CB36FE600B58D4C /* Fantasia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CDDB7431CB36FE700B58D4C /* FantasiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CDDB75B1CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "FantasiaTests" */;
+			buildPhases = (
+				1CDDB7401CB36FE700B58D4C /* Sources */,
+				1CDDB7411CB36FE700B58D4C /* Frameworks */,
+				1CDDB7421CB36FE700B58D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CDDB7461CB36FE700B58D4C /* PBXTargetDependency */,
+			);
+			name = FantasiaTests;
+			productName = FantasiaTests;
+			productReference = 1CDDB7441CB36FE700B58D4C /* FantasiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1CDDB74E1CB36FE700B58D4C /* FantasiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CDDB75E1CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "FantasiaUITests" */;
+			buildPhases = (
+				1CDDB74B1CB36FE700B58D4C /* Sources */,
+				1CDDB74C1CB36FE700B58D4C /* Frameworks */,
+				1CDDB74D1CB36FE700B58D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CDDB7511CB36FE700B58D4C /* PBXTargetDependency */,
+			);
+			name = FantasiaUITests;
+			productName = FantasiaUITests;
+			productReference = 1CDDB74F1CB36FE700B58D4C /* FantasiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CDDB7281CB36FE600B58D4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Sinclair;
+				TargetAttributes = {
+					1CDDB72F1CB36FE600B58D4C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4GJ4BNJFX9;
+					};
+					1CDDB7431CB36FE700B58D4C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4GJ4BNJFX9;
+						TestTargetID = 1CDDB72F1CB36FE600B58D4C;
+					};
+					1CDDB74E1CB36FE700B58D4C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4GJ4BNJFX9;
+						TestTargetID = 1CDDB72F1CB36FE600B58D4C;
+					};
+				};
+			};
+			buildConfigurationList = 1CDDB72B1CB36FE600B58D4C /* Build configuration list for PBXProject "Fantasia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CDDB7271CB36FE600B58D4C;
+			productRefGroup = 1CDDB7311CB36FE600B58D4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CDDB72F1CB36FE600B58D4C /* Fantasia */,
+				1CDDB7431CB36FE700B58D4C /* FantasiaTests */,
+				1CDDB74E1CB36FE700B58D4C /* FantasiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CDDB72E1CB36FE600B58D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CDDB73E1CB36FE700B58D4C /* LaunchScreen.storyboard in Resources */,
+				1CDDB73B1CB36FE600B58D4C /* Assets.xcassets in Resources */,
+				1CDDB7391CB36FE600B58D4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CDDB7421CB36FE700B58D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CDDB74D1CB36FE700B58D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CDDB72C1CB36FE600B58D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CDDB7361CB36FE600B58D4C /* ViewController.swift in Sources */,
+				1CDDB7341CB36FE600B58D4C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CDDB7401CB36FE700B58D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CDDB7491CB36FE700B58D4C /* FantasiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CDDB74B1CB36FE700B58D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CDDB7541CB36FE700B58D4C /* FantasiaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CDDB7461CB36FE700B58D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CDDB72F1CB36FE600B58D4C /* Fantasia */;
+			targetProxy = 1CDDB7451CB36FE700B58D4C /* PBXContainerItemProxy */;
+		};
+		1CDDB7511CB36FE700B58D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CDDB72F1CB36FE600B58D4C /* Fantasia */;
+			targetProxy = 1CDDB7501CB36FE700B58D4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1CDDB7371CB36FE600B58D4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CDDB7381CB36FE600B58D4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1CDDB73C1CB36FE700B58D4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CDDB73D1CB36FE700B58D4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CDDB7561CB36FE700B58D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CDDB7571CB36FE700B58D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CDDB7591CB36FE700B58D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fantasia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.Fantasia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1CDDB75A1CB36FE700B58D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fantasia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.Fantasia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1CDDB75C1CB36FE700B58D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FantasiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.FantasiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fantasia.app/Fantasia";
+			};
+			name = Debug;
+		};
+		1CDDB75D1CB36FE700B58D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FantasiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.FantasiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fantasia.app/Fantasia";
+			};
+			name = Release;
+		};
+		1CDDB75F1CB36FE700B58D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FantasiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.FantasiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Fantasia;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1CDDB7601CB36FE700B58D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FantasiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.FantasiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Fantasia;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CDDB72B1CB36FE600B58D4C /* Build configuration list for PBXProject "Fantasia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CDDB7561CB36FE700B58D4C /* Debug */,
+				1CDDB7571CB36FE700B58D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CDDB7581CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "Fantasia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CDDB7591CB36FE700B58D4C /* Debug */,
+				1CDDB75A1CB36FE700B58D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CDDB75B1CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "FantasiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CDDB75C1CB36FE700B58D4C /* Debug */,
+				1CDDB75D1CB36FE700B58D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CDDB75E1CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "FantasiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CDDB75F1CB36FE700B58D4C /* Debug */,
+				1CDDB7601CB36FE700B58D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CDDB7281CB36FE600B58D4C /* Project object */;
+}
