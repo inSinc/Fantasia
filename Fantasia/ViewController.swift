@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.view.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.blackColor()
         loadData()
         ratingSlider.hidden = true
         happyFace.hidden = true
@@ -66,13 +66,14 @@ class ViewController: UIViewController {
         let viewBoundaries = self.view.bounds
         let viewHeight = viewBoundaries.height
         let viewWidth = viewBoundaries.width
-        imageView.bounds = CGRectMake(viewHeight/2, viewWidth/2, 200.0, 200.0)
+        imageView.bounds = CGRectMake(viewWidth/2, viewHeight/2, 200.0, 200.0)
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.view.addSubview(imageView)
+        self.view.bringSubviewToFront(imageView)
         currentTime = CACurrentMediaTime()
         //show visual stimuli for 1 second
         while((CACurrentMediaTime()-currentTime) < 5.0){}
-        imageView.removeFromSuperview()
+        //imageView.removeFromSuperview()
         happyFace.hidden = false
         sadFace.hidden = false
         ratingSlider.hidden = false
