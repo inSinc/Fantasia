@@ -58,6 +58,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="beginButton" destination="yfp-ZU-o2m" id="0Yd-XN-Tfx"/>
                         <outlet property="currentImage" destination="mQg-BE-1HV" id="aIK-VG-ZTz"/>
                         <outlet property="ratingSlider" destination="28L-Bn-SvE" id="g5m-FL-ihW"/>
                     </connections>

@@ -13,12 +13,12 @@ class VisualStimulus{
     var imageName:String
     var image:UIImage
     var imageRating:Int
-    var userImageRating:Int
+    var userImageRating:Float
     
     init(imageName:String, imageRating:Int){
         self.imageName = imageName
         self.image = UIImage(contentsOfFile: imageName)!
         self.imageRating = imageRating
-        userImageRating = -1000
+        userImageRating = -1000.0
     }
 }
