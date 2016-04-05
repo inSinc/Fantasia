@@ -4,7 +4,7 @@
 //
 //  Created by Sinclair on 4/5/16.
 //  Copyright © 2016 Sinclair. All rights reserved.
-//
+//  App Icon from Edward Boatman
 
 import UIKit
 
@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true

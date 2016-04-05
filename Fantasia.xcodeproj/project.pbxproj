@@ -14,6 +14,8 @@
 		1CDDB73E1CB36FE700B58D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB73C1CB36FE700B58D4C /* LaunchScreen.storyboard */; };
 		1CDDB7491CB36FE700B58D4C /* FantasiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7481CB36FE700B58D4C /* FantasiaTests.swift */; };
 		1CDDB7541CB36FE700B58D4C /* FantasiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7531CB36FE700B58D4C /* FantasiaUITests.swift */; };
+		1CDDB7621CB3703700B58D4C /* VisualStimulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7611CB3703700B58D4C /* VisualStimulus.swift */; };
+		1CDDB7641CB3704700B58D4C /* AuditoryStimulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7631CB3704700B58D4C /* AuditoryStimulus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1CDDB74F1CB36FE700B58D4C /* FantasiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CDDB7531CB36FE700B58D4C /* FantasiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasiaUITests.swift; sourceTree = "<group>"; };
 		1CDDB7551CB36FE700B58D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CDDB7611CB3703700B58D4C /* VisualStimulus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualStimulus.swift; sourceTree = "<group>"; };
+		1CDDB7631CB3704700B58D4C /* AuditoryStimulus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuditoryStimulus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,14 @@
 			children = (
 				1CDDB7331CB36FE600B58D4C /* AppDelegate.swift */,
 				1CDDB7351CB36FE600B58D4C /* ViewController.swift */,
+				1CDDB7611CB3703700B58D4C /* VisualStimulus.swift */,
+				1CDDB7631CB3704700B58D4C /* AuditoryStimulus.swift */,
 				1CDDB7371CB36FE600B58D4C /* Main.storyboard */,
 				1CDDB73A1CB36FE600B58D4C /* Assets.xcassets */,
 				1CDDB73C1CB36FE700B58D4C /* LaunchScreen.storyboard */,
 				1CDDB73F1CB36FE700B58D4C /* Info.plist */,
+				1CDDB7661CB40AB500B58D4C /* AuditoryStimuli */,
+				1CDDB7651CB40AA300B58D4C /* VisualStimuli */,
 			);
 			path = Fantasia;
 			sourceTree = "<group>";
@@ -123,6 +131,20 @@
 				1CDDB7551CB36FE700B58D4C /* Info.plist */,
 			);
 			path = FantasiaUITests;
+			sourceTree = "<group>";
+		};
+		1CDDB7651CB40AA300B58D4C /* VisualStimuli */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VisualStimuli;
+			sourceTree = "<group>";
+		};
+		1CDDB7661CB40AB500B58D4C /* AuditoryStimuli */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AuditoryStimuli;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CDDB7641CB3704700B58D4C /* AuditoryStimulus.swift in Sources */,
 				1CDDB7361CB36FE600B58D4C /* ViewController.swift in Sources */,
+				1CDDB7621CB3703700B58D4C /* VisualStimulus.swift in Sources */,
 				1CDDB7341CB36FE600B58D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
