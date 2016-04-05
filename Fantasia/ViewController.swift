@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sadFace: UIImageView!
     @IBOutlet weak var happyFace: UIImageView!
-    @IBOutlet weak var currentImage: UIImageView!
 
     @IBOutlet weak var ratingSlider: UISlider!
     
@@ -44,32 +43,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.blackColor()
+        //self.view.backgroundColor = UIColor.blackColor()
         loadData()
-        currentImage.hidden = true
         ratingSlider.hidden = true
         happyFace.hidden = true
         sadFace.hidden = true
     }
     
     func run(){
-        currentImage.hidden = true
         beginButton.hidden = true
         happyFace.hidden = true
         sadFace.hidden = true
         ratingSlider.hidden = true
         var currentTime:Double = CACurrentMediaTime()
-        auditoryStimuli[current].player.play()
+        //auditoryStimuli[current].player.play()
         //play auditory stimulus for 8 seconds
-        while((CACurrentMediaTime()-currentTime) < 8.0){}
-        auditoryStimuli[current].player.stop()
-        print(visualStimuli[current].image)
-        currentImage.hidden = false
-        currentImage.image = visualStimuli[current].image
+        //while((CACurrentMediaTime()-currentTime) < 8.0){}
+        //auditoryStimuli[current].player.stop()
+        
+        //add image layer
+        let imageView:UIImageView = UIImageView(image: UIImage(named: "image0.jpeg"))
+        let viewBoundaries = self.view.bounds
+        let viewHeight = viewBoundaries.height
+        let viewWidth = viewBoundaries.width
+        imageView.bounds = CGRectMake(viewHeight/2, viewWidth/2, 200.0, 200.0)
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.view.addSubview(imageView)
         currentTime = CACurrentMediaTime()
         //show visual stimuli for 1 second
-        while((CACurrentMediaTime()-currentTime) < 1.0){}
-        currentImage.hidden = true
+        while((CACurrentMediaTime()-currentTime) < 5.0){}
+        imageView.removeFromSuperview()
         happyFace.hidden = false
         sadFace.hidden = false
         ratingSlider.hidden = false
@@ -77,7 +80,7 @@ class ViewController: UIViewController {
     
     func loadData(){
         for i in 0...20 {
-            imageStrings.append("image\(i).jpeg")
+            imageStrings.append("image\(i)")
             audioStrings.append("audio\(i)")
         }
         visualStimuli.append(VisualStimulus(imageName: imageStrings[0], imageRating: 5))
