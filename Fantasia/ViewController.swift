@@ -4,7 +4,8 @@
 //
 //  Created by Sinclair on 4/5/16.
 //  Copyright © 2016 Sinclair. All rights reserved.
-//
+//  Music from Jukedeck
+//  Images from Unsplash
 
 import UIKit
 
