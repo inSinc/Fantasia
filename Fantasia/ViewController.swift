@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ratingSlider: UISlider!
     
     @IBOutlet weak var beginButton: UIButton!
-    @IBAction func ratingSliderEditingDidEnd(sender: AnyObject) {
+    @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
         print(ratingSlider.value)
         run()

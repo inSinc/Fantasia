@@ -42,7 +42,7 @@
                                 </constraints>
                                 <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="ratingSliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="iUF-Ox-sXV"/>
+                                    <action selector="ratingSlider:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ez9-M4-aiS"/>
                                 </connections>
                             </slider>
                         </subviews>
