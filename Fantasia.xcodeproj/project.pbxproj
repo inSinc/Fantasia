@@ -16,7 +16,7 @@
 		1CDDB7541CB36FE700B58D4C /* FantasiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7531CB36FE700B58D4C /* FantasiaUITests.swift */; };
 		1CDDB7621CB3703700B58D4C /* VisualStimulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7611CB3703700B58D4C /* VisualStimulus.swift */; };
 		1CDDB7641CB3704700B58D4C /* AuditoryStimulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDB7631CB3704700B58D4C /* AuditoryStimulus.swift */; };
-		1CDDB76A1CB4156500B58D4C /* audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB7671CB4156500B58D4C /* audio1.mp3 */; };
+		1CDDB76A1CB4156500B58D4C /* audio0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB7671CB4156500B58D4C /* audio0.mp3 */; };
 		1CDDB76B1CB4156500B58D4C /* image0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB7681CB4156500B58D4C /* image0.jpeg */; };
 		1CDDB76C1CB4156500B58D4C /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1CDDB7691CB4156500B58D4C /* image1.jpeg */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		1CDDB7551CB36FE700B58D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CDDB7611CB3703700B58D4C /* VisualStimulus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualStimulus.swift; sourceTree = "<group>"; };
 		1CDDB7631CB3704700B58D4C /* AuditoryStimulus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuditoryStimulus.swift; sourceTree = "<group>"; };
-		1CDDB7671CB4156500B58D4C /* audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio1.mp3; sourceTree = "<group>"; };
+		1CDDB7671CB4156500B58D4C /* audio0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio0.mp3; sourceTree = "<group>"; };
 		1CDDB7681CB4156500B58D4C /* image0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image0.jpeg; sourceTree = "<group>"; };
 		1CDDB7691CB4156500B58D4C /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 				1CDDB73A1CB36FE600B58D4C /* Assets.xcassets */,
 				1CDDB73C1CB36FE700B58D4C /* LaunchScreen.storyboard */,
 				1CDDB73F1CB36FE700B58D4C /* Info.plist */,
-				1CDDB7671CB4156500B58D4C /* audio1.mp3 */,
+				1CDDB7671CB4156500B58D4C /* audio0.mp3 */,
 				1CDDB7681CB4156500B58D4C /* image0.jpeg */,
 				1CDDB7691CB4156500B58D4C /* image1.jpeg */,
 			);
@@ -251,7 +251,7 @@
 				1CDDB73E1CB36FE700B58D4C /* LaunchScreen.storyboard in Resources */,
 				1CDDB73B1CB36FE600B58D4C /* Assets.xcassets in Resources */,
 				1CDDB7391CB36FE600B58D4C /* Main.storyboard in Resources */,
-				1CDDB76A1CB4156500B58D4C /* audio1.mp3 in Resources */,
+				1CDDB76A1CB4156500B58D4C /* audio0.mp3 in Resources */,
 				1CDDB76C1CB4156500B58D4C /* image1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

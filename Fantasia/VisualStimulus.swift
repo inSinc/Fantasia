@@ -17,7 +17,7 @@ class VisualStimulus{
     
     init(imageName:String, imageRating:Int){
         self.imageName = imageName
-        self.image = UIImage(contentsOfFile: imageName)!
+        self.image = UIImage(named: imageName)!
         self.imageRating = imageRating
         userImageRating = -1000.0
     }
