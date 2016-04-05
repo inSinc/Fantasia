@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
         print(ratingSlider.value)
+        current++
         run()
     }
     @IBAction func beginButton(sender: AnyObject) {
@@ -43,31 +44,28 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.blackColor()
         loadData()
-        ratingSlider.alpha = 0.0
-        currentImage.alpha = 0.0
-        
-        
+        currentImage.hidden = true
+        ratingSlider.hidden = true
     }
     
     func run(){
-        beginButton.alpha = 0
-        ratingSlider.alpha = 0.0
+        currentImage.hidden = true
+        beginButton.hidden = true
+        ratingSlider.hidden = true
         var currentTime:Double = CACurrentMediaTime()
         auditoryStimuli[current].player.play()
-        print("Audio track rating: \(auditoryStimuli[current].audioTrackRating)")
-        while((CACurrentMediaTime()-currentTime) < 8.0){
-        }
+        //play auditory stimulus for 8 seconds
+        while((CACurrentMediaTime()-currentTime) < 8.0){}
         auditoryStimuli[current].player.stop()
         print(visualStimuli[current].image)
-        currentImage.alpha = 1.0
-        currentImage.image = visualStimuli[current].image
+        currentImage.hidden = false
+        currentImage.image = UIImage(named: "image0.jpeg")
         print("Visual stimuli rating: \(visualStimuli[current].imageRating)")
         currentTime = CACurrentMediaTime()
-        while((CACurrentMediaTime()-currentTime) < 1.0){
-        }
-        currentImage.alpha = 0.0
-        ratingSlider.alpha = 1.0
-        print("Hello World")
+        //show visual stimuli for 1 second
+        while((CACurrentMediaTime()-currentTime) < 1.0){}
+        currentImage.hidden = true
+        ratingSlider.hidden = false
     }
     
     func loadData(){
@@ -78,7 +76,7 @@ class ViewController: UIViewController {
         visualStimuli.append(VisualStimulus(imageName: imageStrings[0], imageRating: 5))
         visualStimuli.append(VisualStimulus(imageName: imageStrings[1], imageRating: -4))
         auditoryStimuli.append(AuditoryStimulus(audioTrackName: audioStrings[0], audioTrackRating: -3))
-        auditoryStimuli.append(AuditoryStimulus(audioTrackName: audioStrings[0], audioTrackRating: 2))
+        auditoryStimuli.append(AuditoryStimulus(audioTrackName: audioStrings[1], audioTrackRating: 2))
     }
     
     func pushToFirebase(){

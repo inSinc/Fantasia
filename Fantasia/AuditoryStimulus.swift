@@ -20,7 +20,7 @@ class AuditoryStimulus{
         self.audioTrackRating = audioTrackRating
         player = AVAudioPlayer()
         userAudioRating = -1000
-        let audioPath = NSBundle.mainBundle().pathForResource("audio0", ofType: "mp3")!
+        let audioPath = NSBundle.mainBundle().pathForResource(audioTrackName, ofType: "mp3")!
         do{
             try self.player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
             
