@@ -16,11 +16,18 @@ func save(){
 }
 
 class ViewController: UIViewController {
+    @IBOutlet weak var currentImage: UIImageView!
 
+    @IBOutlet weak var ratingSlider: UISlider!
+    
+    @IBAction func ratingSliderEditingDidEnd(sender: AnyObject) {
+    }
+    @IBAction func beginButton(sender: AnyObject) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.init(red: 36.0, green: 36.0, blue: 36.0, alpha: 1.0)
+        self.view.backgroundColor = UIColor.blackColor()
     }
     
     func loadData(){

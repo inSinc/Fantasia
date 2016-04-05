@@ -17,19 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQg-BE-1HV">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mQg-BE-1HV">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1gy-uY-M0X"/>
+                                    <constraint firstAttribute="height" constant="200" id="gJX-YP-bu9"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-ZU-o2m">
-                                <rect key="frame" x="86" y="418" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-ZU-o2m">
+                                <rect key="frame" x="266" y="277" width="69" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipZ-KC-3Af"/>
+                                </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="28L-Bn-SvE">
+                                <rect key="frame" x="123" y="285" width="354" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="BbM-Kz-pID"/>
+                                    <constraint firstAttribute="height" constant="30" id="uqF-ce-NND"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="ratingSliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="iUF-Ox-sXV"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yfp-ZU-o2m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7x9-AY-9fd"/>
+                            <constraint firstItem="28L-Bn-SvE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H4c-kQ-vq5"/>
+                            <constraint firstItem="28L-Bn-SvE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ogs-07-f17"/>
+                            <constraint firstItem="mQg-BE-1HV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pmb-x3-uyi"/>
+                            <constraint firstItem="mQg-BE-1HV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVj-Nj-h36"/>
+                            <constraint firstItem="yfp-ZU-o2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIE-eL-Hub"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="currentImage" destination="mQg-BE-1HV" id="aIK-VG-ZTz"/>
+                        <outlet property="ratingSlider" destination="28L-Bn-SvE" id="g5m-FL-ihW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="460" y="352"/>
         </scene>
     </scenes>
 </document>
