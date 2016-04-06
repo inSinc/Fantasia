@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
+    var stimuliTime = 5.0
+    var numberOfStimuli = 20
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var currentImage: UIImageView!
@@ -31,7 +33,9 @@ class ViewController: UIViewController {
     @IBAction func reset(sender: AnyObject) {
         load()
         beginButton.hidden = false
+        resetButton.hidden = true
     }
+    
     @IBOutlet weak var beginButton: UIButton!
     @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
@@ -43,7 +47,7 @@ class ViewController: UIViewController {
         ratingSlider.hidden = true
         resetButton.hidden = true
         ratingSlider.value = 0.0
-        if(current==20){
+        if(current==numberOfStimuli){
             pushToFirebase()
             reset(sender)
         }else{
@@ -61,7 +65,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
         //load visual & auditory stimuli
-        for i in 0...19{
+        for i in 0..<numberOfStimuli{
             visualStimuli.append(VisualStimulus(imageName: "image\(i)", imageRating: 5))
             auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0"))
         }
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
     
     func load(){
         current = 0
-        for i in 0...19{
+        for i in 0..<numberOfStimuli{
             visualStimuli[i].userImageRating = -1000
         }
         shuffle(CACurrentMediaTime())
@@ -86,8 +90,8 @@ class ViewController: UIViewController {
         currentImage.hidden = false
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
-        stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
-        ratingTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
+        stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
+        ratingTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
         print("Pre-rating: \(visualStimuli[current].userImageRating)")
     }
     
@@ -121,13 +125,12 @@ class ViewController: UIViewController {
         var audioNames = [String]()
         var visualNames = [String]()
         var userRatings = [Float]()
-        for i in 0...19{
+        for i in 0..<numberOfStimuli{
             audioNames.append(auditoryStimuli[i].audioTrackName)
             visualNames.append(visualStimuli[i].imageName)
             userRatings.append(visualStimuli[i].userImageRating)
             print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
         }
-
     }
 
     override func didReceiveMemoryWarning() {
