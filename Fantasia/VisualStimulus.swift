@@ -17,7 +17,7 @@ class VisualStimulus{
     
     init(imageName:String, imageRating:Int){
         self.imageName = imageName
-        let filePath = NSBundle.mainBundle().pathForResource(imageName, ofType: ".jpeg")
+        let filePath = NSBundle.mainBundle().pathForResource(imageName, ofType: ".jpg")
         self.image = UIImage(contentsOfFile: filePath!)!
         self.imageRating = imageRating
         userImageRating = -1000.0

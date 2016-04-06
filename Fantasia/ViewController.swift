@@ -18,23 +18,26 @@ func save(){
 }
 
 class ViewController: UIViewController {
-    var imageStrings = [String]()
-    var audioStrings = [String]()
     var timer = NSTimer()
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
     
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var sadFace: UIImageView!
     @IBOutlet weak var happyFace: UIImageView!
 
     @IBOutlet weak var ratingSlider: UISlider!
-    
+    @IBAction func reset(sender: AnyObject) {
+        load()
+        beginButton.hidden = false
+    }
     @IBOutlet weak var beginButton: UIButton!
     @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
         print(ratingSlider.value)
+        print("Name: \(visualStimuli[current].imageName) Post-rating: \(visualStimuli[current].userImageRating)")
         current++
         happyFace.hidden = true
         sadFace.hidden = true
@@ -52,7 +55,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
-        loadData()
+        //load visual & auditory stimuli
+        for i in 0...19{
+            visualStimuli.append(VisualStimulus(imageName: "image\(i)", imageRating: 5))
+            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0", audioTrackRating: 2))
+        }
+        load()
+    }
+    
+    func load(){
+        for i in 0...19{
+            visualStimuli[i].userImageRating = -1000
+        }
+        shuffle()
         ratingSlider.hidden = true
         happyFace.hidden = true
         sadFace.hidden = true
@@ -65,6 +80,18 @@ class ViewController: UIViewController {
         auditoryStimuli[current].player.play()
         stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
         ratingTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
+        print("Pre-rating: \(visualStimuli[current].userImageRating)")
+    }
+    
+    //shuffle/randomize stimuli
+    func shuffle(){
+        let c = visualStimuli.count
+        for current in 0..<(c-1){
+            let other = random()%c
+            let another = random()%c
+            swap(&visualStimuli[current], &visualStimuli[other])
+            swap(&auditoryStimuli[current], &auditoryStimuli[other])
+        }
     }
     
     func showRating(){
@@ -76,20 +103,6 @@ class ViewController: UIViewController {
     func stopStimuli(){
         currentImage.hidden = true
         auditoryStimuli[current].player.stop()
-    }
-    
-    func loadData(){
-        for i in 0...20 {
-            imageStrings.append("image\(i)")
-            audioStrings.append("audio\(i)")
-        }
-        for i in 0...10{
-            visualStimuli.append(VisualStimulus(imageName: imageStrings[0], imageRating: 5))
-            visualStimuli.append(VisualStimulus(imageName: imageStrings[1], imageRating: -4))
-            auditoryStimuli.append(AuditoryStimulus(audioTrackName: audioStrings[0], audioTrackRating: -3))
-            auditoryStimuli.append(AuditoryStimulus(audioTrackName: audioStrings[1], audioTrackRating: 2))
-        }
-        
     }
     
     func pushToFirebase(){

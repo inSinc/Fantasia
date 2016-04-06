@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -44,13 +45,22 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-qW-Cqf">
                                 <rect key="frame" x="495" y="281" width="38" height="38"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-qq-vC8">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-qq-vC8">
+                                <rect key="frame" x="177.5" y="214" width="245" height="172"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="h6R-7F-goF"/>
-                                    <constraint firstAttribute="width" constant="200" id="tUt-aY-dZO"/>
+                                    <constraint firstAttribute="height" constant="172" id="h6R-7F-goF"/>
+                                    <constraint firstAttribute="width" constant="245" id="tUt-aY-dZO"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioz-An-Sgn">
+                                <rect key="frame" x="534" y="43" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUl-RN-afP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -59,10 +69,12 @@
                             <constraint firstItem="cIx-qq-vC8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J2y-aH-TqU"/>
                             <constraint firstItem="28L-Bn-SvE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ogs-07-f17"/>
                             <constraint firstItem="yCW-DL-LRz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PWp-ga-0jz"/>
+                            <constraint firstItem="ioz-An-Sgn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="T11-YN-Xvt"/>
                             <constraint firstItem="LNb-qW-Cqf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TVl-Za-sta"/>
                             <constraint firstItem="28L-Bn-SvE" firstAttribute="leading" secondItem="yCW-DL-LRz" secondAttribute="trailing" constant="20" id="b3E-ay-XBn"/>
                             <constraint firstItem="yfp-ZU-o2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIE-eL-Hub"/>
                             <constraint firstItem="cIx-qq-vC8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uhO-TO-Wsa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ioz-An-Sgn" secondAttribute="trailing" constant="7" id="x6t-1u-1Jn"/>
                             <constraint firstItem="LNb-qW-Cqf" firstAttribute="leading" secondItem="28L-Bn-SvE" secondAttribute="trailing" constant="20" id="xi5-Cw-g5b"/>
                         </constraints>
                     </view>
@@ -72,6 +84,7 @@
                         <outlet property="currentImage" destination="cIx-qq-vC8" id="UXA-Ty-7Mi"/>
                         <outlet property="happyFace" destination="LNb-qW-Cqf" id="Gfx-qU-Yyb"/>
                         <outlet property="ratingSlider" destination="28L-Bn-SvE" id="g5m-FL-ihW"/>
+                        <outlet property="resetButton" destination="ioz-An-Sgn" id="I4B-Kc-aDn"/>
                         <outlet property="sadFace" destination="yCW-DL-LRz" id="mwo-Qb-qKM"/>
                     </connections>
                 </viewController>
