@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-ZU-o2m">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-ZU-o2m">
                                 <rect key="frame" x="266" y="277" width="69" height="46"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
                                 <state key="normal" title="Begin">
@@ -44,22 +44,32 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-qW-Cqf">
                                 <rect key="frame" x="495" y="281" width="38" height="38"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-qq-vC8">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="h6R-7F-goF"/>
+                                    <constraint firstAttribute="width" constant="200" id="tUt-aY-dZO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yfp-ZU-o2m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7x9-AY-9fd"/>
                             <constraint firstItem="28L-Bn-SvE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H4c-kQ-vq5"/>
+                            <constraint firstItem="cIx-qq-vC8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J2y-aH-TqU"/>
                             <constraint firstItem="28L-Bn-SvE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ogs-07-f17"/>
                             <constraint firstItem="yCW-DL-LRz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PWp-ga-0jz"/>
                             <constraint firstItem="LNb-qW-Cqf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TVl-Za-sta"/>
                             <constraint firstItem="28L-Bn-SvE" firstAttribute="leading" secondItem="yCW-DL-LRz" secondAttribute="trailing" constant="20" id="b3E-ay-XBn"/>
                             <constraint firstItem="yfp-ZU-o2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIE-eL-Hub"/>
+                            <constraint firstItem="cIx-qq-vC8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uhO-TO-Wsa"/>
                             <constraint firstItem="LNb-qW-Cqf" firstAttribute="leading" secondItem="28L-Bn-SvE" secondAttribute="trailing" constant="20" id="xi5-Cw-g5b"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="beginButton" destination="yfp-ZU-o2m" id="0Yd-XN-Tfx"/>
+                        <outlet property="currentImage" destination="cIx-qq-vC8" id="UXA-Ty-7Mi"/>
                         <outlet property="happyFace" destination="LNb-qW-Cqf" id="Gfx-qU-Yyb"/>
                         <outlet property="ratingSlider" destination="28L-Bn-SvE" id="g5m-FL-ihW"/>
                         <outlet property="sadFace" destination="yCW-DL-LRz" id="mwo-Qb-qKM"/>
