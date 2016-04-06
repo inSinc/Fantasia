@@ -24,7 +24,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="beginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipZ-KC-3Af"/>
+                                    <action selector="beginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SH3-O0-eZl"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="28L-Bn-SvE">

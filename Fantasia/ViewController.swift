@@ -42,7 +42,6 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.blackColor()
         loadData()
         ratingSlider.hidden = true
@@ -68,12 +67,15 @@ class ViewController: UIViewController {
         let viewWidth = viewBoundaries.width
         imageView.bounds = CGRectMake(viewWidth/2, viewHeight/2, 200.0, 200.0)
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        imageView.alpha = 1.0
+        print(imageView)
         self.view.addSubview(imageView)
         self.view.bringSubviewToFront(imageView)
+        print(self.view)
         currentTime = CACurrentMediaTime()
         //show visual stimuli for 1 second
         while((CACurrentMediaTime()-currentTime) < 5.0){}
-        //imageView.removeFromSuperview()
+        imageView.removeFromSuperview()
         happyFace.hidden = false
         sadFace.hidden = false
         ratingSlider.hidden = false
