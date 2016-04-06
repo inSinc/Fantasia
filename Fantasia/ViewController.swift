@@ -66,7 +66,7 @@ class ViewController: UIViewController {
             auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0"))
         }
         load()
-        shuffle()
+        shuffle(CACurrentMediaTime())
         resetButton.hidden = true
     }
     
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         for i in 0...19{
             visualStimuli[i].userImageRating = -1000
         }
-        shuffle()
+        shuffle(CACurrentMediaTime())
         ratingSlider.hidden = true
         happyFace.hidden = true
         sadFace.hidden = true
@@ -92,15 +92,16 @@ class ViewController: UIViewController {
     }
     
     //shuffle/randomize stimuli
-    func shuffle(){
+    func shuffle(firstRandom:Double){
         let c = visualStimuli.count
+        var other = Int(firstRandom)%c
         for current in 0..<(c-1){
-            let other = random()%c
             //let another = random()%c
             if(current != other){
                 swap(&visualStimuli[current], &visualStimuli[other])
                 swap(&auditoryStimuli[current], &auditoryStimuli[other])
             }
+            other = random()%c
         }
     }
     
