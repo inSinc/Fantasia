@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         happyFace.hidden = true
         sadFace.hidden = true
         ratingSlider.hidden = true
+        resetButton.hidden = true
         ratingSlider.value = 0.0
         run()
     }
@@ -61,6 +62,7 @@ class ViewController: UIViewController {
             auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0", audioTrackRating: 2))
         }
         load()
+        resetButton.hidden = true
     }
     
     func load(){
@@ -98,6 +100,7 @@ class ViewController: UIViewController {
         happyFace.hidden = false
         sadFace.hidden = false
         ratingSlider.hidden = false
+        resetButton.hidden = false
     }
     
     func stopStimuli(){
