@@ -5,7 +5,6 @@
 //  Created by Sinclair on 4/5/16.
 //  Copyright © 2016 Sinclair. All rights reserved.
 //  Music from Jukedeck
-//  Images from Unsplash
 
 import UIKit
 
@@ -27,8 +26,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var sadFace: UIImageView!
     @IBOutlet weak var happyFace: UIImageView!
-
     @IBOutlet weak var ratingSlider: UISlider!
+    
     @IBAction func reset(sender: AnyObject) {
         load()
         beginButton.hidden = false
@@ -44,7 +43,12 @@ class ViewController: UIViewController {
         ratingSlider.hidden = true
         resetButton.hidden = true
         ratingSlider.value = 0.0
-        run()
+        if(current==20){
+            pushToFirebase()
+            reset(sender)
+        }else{
+            run()
+        }
     }
     
     @IBAction func beginButton(sender: AnyObject) {
@@ -59,13 +63,15 @@ class ViewController: UIViewController {
         //load visual & auditory stimuli
         for i in 0...19{
             visualStimuli.append(VisualStimulus(imageName: "image\(i)", imageRating: 5))
-            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0", audioTrackRating: 2))
+            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0"))
         }
         load()
+        shuffle()
         resetButton.hidden = true
     }
     
     func load(){
+        current = 0
         for i in 0...19{
             visualStimuli[i].userImageRating = -1000
         }
@@ -80,8 +86,8 @@ class ViewController: UIViewController {
         currentImage.hidden = false
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
-        stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
-        ratingTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
+        stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
+        ratingTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
         print("Pre-rating: \(visualStimuli[current].userImageRating)")
     }
     
@@ -90,9 +96,11 @@ class ViewController: UIViewController {
         let c = visualStimuli.count
         for current in 0..<(c-1){
             let other = random()%c
-            let another = random()%c
-            swap(&visualStimuli[current], &visualStimuli[other])
-            swap(&auditoryStimuli[current], &auditoryStimuli[other])
+            //let another = random()%c
+            if(current != other){
+                swap(&visualStimuli[current], &visualStimuli[other])
+                swap(&auditoryStimuli[current], &auditoryStimuli[other])
+            }
         }
     }
     
@@ -109,7 +117,16 @@ class ViewController: UIViewController {
     }
     
     func pushToFirebase(){
-        
+        var audioNames = [String]()
+        var visualNames = [String]()
+        var userRatings = [Float]()
+        for i in 0...19{
+            audioNames.append(auditoryStimuli[i].audioTrackName)
+            visualNames.append(visualStimuli[i].imageName)
+            userRatings.append(visualStimuli[i].userImageRating)
+            print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
