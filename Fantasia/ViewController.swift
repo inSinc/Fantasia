@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
-    var stimuliTime = 5.0
+    var stimuliTime = 1.0
     var numberOfStimuli = 20
     
     @IBOutlet weak var resetButton: UIButton!
@@ -67,7 +67,11 @@ class ViewController: UIViewController {
         //load visual & auditory stimuli
         for i in 0..<numberOfStimuli{
             visualStimuli.append(VisualStimulus(imageName: "image\(i)", imageRating: 5))
-            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "audio0"))
+            
+        }
+        for i in 1...numberOfStimuli/2{
+            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))
+            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "sad\(i)"))
         }
         load()
         shuffle(CACurrentMediaTime())
@@ -90,6 +94,7 @@ class ViewController: UIViewController {
         currentImage.hidden = false
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
+        print(auditoryStimuli[current].audioTrackName)
         stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
         ratingTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
         print("Pre-rating: \(visualStimuli[current].userImageRating)")
