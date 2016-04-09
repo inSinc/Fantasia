@@ -125,6 +125,7 @@ class ViewController: UIViewController {
     }
     
     func pushToFirebase(){
+        //push sex, age, experience
         var audioNames = [String]()
         var visualNames = [String]()
         var userRatings = [Float]()
