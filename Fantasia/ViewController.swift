@@ -4,7 +4,6 @@
 //
 //  Created by Sinclair on 4/5/16.
 //  Copyright © 2016 Sinclair. All rights reserved.
-//  Music from Jukedeck
 
 import UIKit
 
@@ -21,7 +20,7 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
-    var stimuliTime = 1.0
+    var stimuliTime = 5.0
     var numberOfStimuli = 20
     
     @IBOutlet weak var resetButton: UIButton!
@@ -66,8 +65,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.blackColor()
         //load visual & auditory stimuli
         for i in 0..<numberOfStimuli{
-            visualStimuli.append(VisualStimulus(imageName: "image\(i)", imageRating: 5))
-            
+            visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
         }
         for i in 1...numberOfStimuli/2{
             auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))

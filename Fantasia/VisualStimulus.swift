@@ -15,11 +15,11 @@ class VisualStimulus{
     var imageRating:Int
     var userImageRating:Float
     
-    init(imageName:String, imageRating:Int){
+    init(imageName:String){
         self.imageName = imageName
         let filePath = NSBundle.mainBundle().pathForResource(imageName, ofType: ".jpg")
         self.image = UIImage(contentsOfFile: filePath!)!
-        self.imageRating = imageRating
+        self.imageRating = -1000
         userImageRating = -1000.0
     }
 }
