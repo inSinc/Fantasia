@@ -145,7 +145,7 @@
                         <outlet property="sexLabel" destination="q3N-sH-wwf" id="0Pu-CM-WdE"/>
                         <outlet property="submitButton" destination="t7e-F4-6Vx" id="ypG-b6-8WU"/>
                         <outlet property="welcomeLabel" destination="t32-AV-roi" id="Xi0-sy-Gxk"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="conditionSegue" id="fFP-n4-xA1"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="conditionSegue" modalTransitionStyle="crossDissolve" id="fFP-n4-xA1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nk5-b3-h5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,9 +202,15 @@
                                 </state>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUl-RN-afP"/>
-                                    <segue destination="0g4-rH-Z8b" kind="show" identifier="returnToIntro" id="J5H-bl-XRv"/>
+                                    <segue destination="0g4-rH-Z8b" kind="modal" identifier="returnToIntro" modalTransitionStyle="crossDissolve" id="J5H-bl-XRv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results have been uploaded." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJV-NY-682">
+                                <rect key="frame" x="200" y="290" width="200.5" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="28L-Bn-SvE">
                                 <rect key="frame" x="18" y="285" width="564" height="31"/>
                                 <constraints>
@@ -236,9 +242,11 @@
                             <constraint firstItem="LNb-qW-Cqf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-35" id="TVl-Za-sta"/>
                             <constraint firstItem="cIx-qq-vC8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="aDD-we-rHk"/>
                             <constraint firstItem="28L-Bn-SvE" firstAttribute="leading" secondItem="yCW-DL-LRz" secondAttribute="trailing" constant="20" id="b3E-ay-XBn"/>
+                            <constraint firstItem="EJV-NY-682" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dja-cK-jcw"/>
                             <constraint firstItem="yfp-ZU-o2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIE-eL-Hub"/>
                             <constraint firstAttribute="trailingMargin" secondItem="28L-Bn-SvE" secondAttribute="trailing" id="jks-9g-ZCl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="28L-Bn-SvE" secondAttribute="leading" id="nVl-zR-cnF"/>
+                            <constraint firstItem="EJV-NY-682" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uW7-Hb-V8C"/>
                             <constraint firstItem="cIx-qq-vC8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uhO-TO-Wsa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ioz-An-Sgn" secondAttribute="trailing" id="x6t-1u-1Jn"/>
                             <constraint firstItem="LNb-qW-Cqf" firstAttribute="leading" secondItem="28L-Bn-SvE" secondAttribute="trailing" constant="20" id="xi5-Cw-g5b"/>
@@ -261,6 +269,7 @@
                     <connections>
                         <outlet property="beginButton" destination="yfp-ZU-o2m" id="0Yd-XN-Tfx"/>
                         <outlet property="currentImage" destination="cIx-qq-vC8" id="UXA-Ty-7Mi"/>
+                        <outlet property="finishLabel" destination="EJV-NY-682" id="rwH-oW-ICf"/>
                         <outlet property="happyFace" destination="LNb-qW-Cqf" id="Gfx-qU-Yyb"/>
                         <outlet property="ratingSlider" destination="28L-Bn-SvE" id="g5m-FL-ihW"/>
                         <outlet property="resetButton" destination="ioz-An-Sgn" id="I4B-Kc-aDn"/>

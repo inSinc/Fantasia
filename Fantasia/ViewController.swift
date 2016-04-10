@@ -20,9 +20,10 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
-    var stimuliTime = 5.0
+    var stimuliTime = 1.0
     var numberOfStimuli = 20
     
+    @IBOutlet weak var finishLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var sadFace: UIImageView!
@@ -48,21 +49,9 @@ class ViewController: UIViewController {
         ratingSlider.value = 0.0
         if(current==numberOfStimuli){
             pushToFirebase()
-            let finishLabel:UILabel = UILabel(frame: CGRectMake(0,0,250,250))
-            finishLabel.text = "Results have been recorded."
-            finishLabel.font = UIFont(name: "HelveticaNeue-Light", size: 14.0)
-            finishLabel.textColor = UIColor.whiteColor()
-            finishLabel.alpha = 0.0
-            finishLabel.layoutIfNeeded()
-            finishLabel.userInteractionEnabled = true
-            finishLabel.textAlignment = NSTextAlignment.Center
-            finishLabel.center = CGPointMake(self.view.center.x, self.view.center.y)
-            print(finishLabel)
-            self.view.addSubview(finishLabel)
             UIView.animateWithDuration(2.0, animations: { () -> Void in
-                finishLabel.alpha = 1.0
+                self.finishLabel.alpha = 1.0
             })
-            finishLabel.removeFromSuperview()
             //delaying segue dispatch
             let delay = 2.0
             let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(UInt64(delay) * NSEC_PER_SEC))
@@ -76,6 +65,7 @@ class ViewController: UIViewController {
     
     @IBAction func beginButton(sender: AnyObject) {
         //run()
+        //use dispatch async instead
         timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: Selector("run"), userInfo: nil, repeats: false)
         beginButton.hidden = true
     }
@@ -91,6 +81,7 @@ class ViewController: UIViewController {
             auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))
             auditoryStimuli.append(AuditoryStimulus(audioTrackName: "sad\(i)"))
         }
+        finishLabel.alpha = 0.0
         load()
         shuffle(CACurrentMediaTime())
         resetButton.hidden = true
@@ -113,6 +104,7 @@ class ViewController: UIViewController {
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
         print(auditoryStimuli[current].audioTrackName)
+        //use dispatch async in future versions
         stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
         ratingTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
         print("Pre-rating: \(visualStimuli[current].userImageRating)")
