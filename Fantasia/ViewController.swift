@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         //resetButton.hidden = true
     }
     
-    @IBOutlet weak var beginButton: UIButton!
     @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
         print(ratingSlider.value)
@@ -49,25 +48,18 @@ class ViewController: UIViewController {
         ratingSlider.value = 0.0
         if(current==numberOfStimuli){
             pushToFirebase()
-            UIView.animateWithDuration(2.0, animations: { () -> Void in
+            UIView.animateWithDuration(1.5, animations: { () -> Void in
                 self.finishLabel.alpha = 1.0
             })
             //delaying segue dispatch
             let delay = 2.0
             let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(UInt64(delay) * NSEC_PER_SEC))
             dispatch_after(dispatchTime, dispatch_get_main_queue(), { () -> Void in
-                self.performSegueWithIdentifier("returnToIntro", sender: nil)
+                    self.performSegueWithIdentifier("returnToDemographics", sender: nil)
             })
         }else{
             run()
         }
-    }
-    
-    @IBAction func beginButton(sender: AnyObject) {
-        //run()
-        //use dispatch async instead
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: Selector("run"), userInfo: nil, repeats: false)
-        beginButton.hidden = true
     }
     
     override func viewDidLoad() {
@@ -85,6 +77,7 @@ class ViewController: UIViewController {
         load()
         shuffle(CACurrentMediaTime())
         resetButton.hidden = true
+        run()
     }
     
     func load(){

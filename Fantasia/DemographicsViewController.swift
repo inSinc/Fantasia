@@ -16,7 +16,7 @@ var sex:String = String()
 var age:Int = Int()
 var musicalExperience:String = String()
 
-class IntroViewController: UIViewController, UITextFieldDelegate {
+class DemographicsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var welcomeLabel: UILabel!
 
     @IBOutlet weak var ageLabel: UILabel!
@@ -33,16 +33,13 @@ class IntroViewController: UIViewController, UITextFieldDelegate {
             age = Int(ageInputField.text!)!
             musicalExperience = musicalExperienceInput.titleForSegmentAtIndex(musicalExperienceInput.selectedSegmentIndex)!
             //print("Sex: \(sex) Age: \(age) Musical Experience: \(musicalExperience)")
-            self.performSegueWithIdentifier("conditionSegue", sender: nil)
+            self.performSegueWithIdentifier("toInstructions", sender: nil)
         }else{
             instructionLabel.textColor = UIColor.redColor()
         }
         
     }
-    @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
-    @IBAction func moreInfoButton(sender: AnyObject) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +67,6 @@ class IntroViewController: UIViewController, UITextFieldDelegate {
         ageInputField.alpha = 0.0
         musicalExperienceInput.alpha = 0.0
         submitButton.alpha = 0.0
-        infoButton.alpha = 0.0
         UIView.animateWithDuration(2.0, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
             self.welcomeLabel.alpha = 1.0
             }) { (Bool) -> Void in
@@ -90,7 +86,6 @@ class IntroViewController: UIViewController, UITextFieldDelegate {
             self.instructionLabel.alpha = 1.0
             self.musicalExperienceLabel.alpha = 1.0
             self.submitButton.alpha = 1.0
-            self.infoButton.alpha = 1.0
             }) { (Bool) -> Void in
                 
         }
