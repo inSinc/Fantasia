@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
-    var stimuliTime = 1.0
+    var stimuliTime = 2.0
     var numberOfStimuli = 20
     
     @IBOutlet weak var finishLabel: UILabel!
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     }
     
     func load(){
-        current = 19
+        current = 0
         for i in 0..<numberOfStimuli{
             visualStimuli[i].userImageRating = -1000
         }
