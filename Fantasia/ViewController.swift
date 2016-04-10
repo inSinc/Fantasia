@@ -30,9 +30,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ratingSlider: UISlider!
     
     @IBAction func reset(sender: AnyObject) {
-        load()
-        beginButton.hidden = false
-        resetButton.hidden = true
+        //load()
+        //beginButton.hidden = false
+        //resetButton.hidden = true
     }
     
     @IBOutlet weak var beginButton: UIButton!
@@ -48,7 +48,27 @@ class ViewController: UIViewController {
         ratingSlider.value = 0.0
         if(current==numberOfStimuli){
             pushToFirebase()
-            reset(sender)
+            let finishLabel:UILabel = UILabel(frame: CGRectMake(0,0,250,250))
+            finishLabel.text = "Results have been recorded."
+            finishLabel.font = UIFont(name: "HelveticaNeue-Light", size: 14.0)
+            finishLabel.textColor = UIColor.whiteColor()
+            finishLabel.alpha = 0.0
+            finishLabel.layoutIfNeeded()
+            finishLabel.userInteractionEnabled = true
+            finishLabel.textAlignment = NSTextAlignment.Center
+            finishLabel.center = CGPointMake(self.view.center.x, self.view.center.y)
+            print(finishLabel)
+            self.view.addSubview(finishLabel)
+            UIView.animateWithDuration(2.0, animations: { () -> Void in
+                finishLabel.alpha = 1.0
+            })
+            finishLabel.removeFromSuperview()
+            //delaying segue dispatch
+            let delay = 2.0
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(UInt64(delay) * NSEC_PER_SEC))
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("returnToIntro", sender: nil)
+            })
         }else{
             run()
         }
@@ -77,7 +97,7 @@ class ViewController: UIViewController {
     }
     
     func load(){
-        current = 0
+        current = 19
         for i in 0..<numberOfStimuli{
             visualStimuli[i].userImageRating = -1000
         }
@@ -125,6 +145,7 @@ class ViewController: UIViewController {
     }
     
     func pushToFirebase(){
+        print("Sex: \(sex) Age: \(age) Musical Experience: \(musicalExperience)")
         //push sex, age, experience
         var audioNames = [String]()
         var visualNames = [String]()

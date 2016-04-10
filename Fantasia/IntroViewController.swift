@@ -28,13 +28,12 @@ class IntroViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var musicalExperienceInput: UISegmentedControl!
     @IBAction func submitButton(sender: AnyObject) {
-        if (sexInputField.selected && ((ageInputField.text?.isEmpty) != nil) && musicalExperienceInput.selected){
+        if ((sexInputField.selectedSegmentIndex > -1) && ((ageInputField.text?.isEmpty) != true) && (musicalExperienceInput.selectedSegmentIndex > -1)){
             sex = sexInputField.titleForSegmentAtIndex(sexInputField.selectedSegmentIndex)!
             age = Int(ageInputField.text!)!
             musicalExperience = musicalExperienceInput.titleForSegmentAtIndex(musicalExperienceInput.selectedSegmentIndex)!
-            //self.navigationController?.pushViewController(ViewController as! UIViewController(), animated: true)
-            //prepare segue here
-            self.performSegueWithIdentifier("transitionToViewController", sender: sender)
+            //print("Sex: \(sex) Age: \(age) Musical Experience: \(musicalExperience)")
+            self.performSegueWithIdentifier("conditionSegue", sender: nil)
         }else{
             instructionLabel.textColor = UIColor.redColor()
         }
@@ -106,13 +105,4 @@ class IntroViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (sender?.identifier=="transitionToViewController"){
-            sel
-        }
-    }
-
-
 }
