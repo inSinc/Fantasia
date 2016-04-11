@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
         //print(ratingSlider.value)
-        //print("Name: \(visualStimuli[current].imageName) Post-rating: \(visualStimuli[current].userImageRating)")
+        //print("Viual: \(visualStimuli[current].imageName) Audio: \(auditoryStimuli[current].audioTrackName) Post-rating: \(visualStimuli[current].userImageRating)")
         current++
         happyFace.hidden = true
         sadFace.hidden = true
@@ -109,6 +109,7 @@ class ViewController: UIViewController {
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
         //print(auditoryStimuli[current].audioTrackName)
+        //print(visualStimuli[current].imageName)
         //use dispatch async in future versions
         stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
         ratingTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
