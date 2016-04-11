@@ -28,6 +28,9 @@ class DemographicsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sexInputField: UISegmentedControl!
     @IBOutlet weak var ageInputField: UITextField!
 
+    @IBAction func musicalExperienceInput(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
     @IBOutlet weak var musicalExperienceInput: UISegmentedControl!
     @IBAction func submitButton(sender: AnyObject) {
         if ((sexInputField.selectedSegmentIndex > -1) && ((ageInputField.text?.isEmpty) != true) && (musicalExperienceInput.selectedSegmentIndex > -1)){

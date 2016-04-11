@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
-    var stimuliTime = 5.0
+    var stimuliTime = 9.0
     var numberOfStimuli = 20
     var firebaseRoot = Firebase()
     
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
             //print("LOADED STIMULI")
             loadedStimuli = true
         }
-        if stimuliTimeOverride > 0 && stimuliTimeOverride < 10 {
+        if stimuliTimeOverride >= 0 && stimuliTimeOverride < 10 {
             stimuliTime = Double(stimuliTimeOverride)
         }
         finishLabel.alpha = 0.0
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
     }
     
     func pushToFirebase(){
-        print("Sex: \(sex) Age: \(age) Musical Experience: \(musicalExperience)")
+        //print("Sex: \(sex) Age: \(age) Musical Experience: \(musicalExperience)")
         //push sex, age, experience
         var audioNames = [String]()
         var visualNames = [String]()
