@@ -6,6 +6,7 @@
 //  Copyright © 2016 Sinclair. All rights reserved.
 
 import UIKit
+import Firebase
 
 var visualStimuli = [VisualStimulus]()
 var auditoryStimuli = [AuditoryStimulus]()
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
     }
     
     func load(){
-        current = 0
+        current = 19
         for i in 0..<numberOfStimuli{
             visualStimuli[i].userImageRating = -1000
         }
@@ -141,6 +142,11 @@ class ViewController: UIViewController {
             userRatings.append(visualStimuli[i].userImageRating)
             print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
         }
+        // Create a reference to a Firebase location
+        let myRootRef = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
+        // Write data to Firebase
+        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        
     }
 
     override func didReceiveMemoryWarning() {
