@@ -70,6 +70,8 @@ class ViewController: UIViewController {
         //establishing firebase root
         firebaseRoot = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
         //load visual & auditory stimuli
+        visualStimuli = [VisualStimulus]()
+        auditoryStimuli = [AuditoryStimulus]()
         for i in 0..<numberOfStimuli{
             visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
         }
@@ -83,7 +85,6 @@ class ViewController: UIViewController {
         }
         finishLabel.alpha = 0.0
         load()
-        shuffle(CACurrentMediaTime())
         resetButton.hidden = true
         run()
     }
@@ -104,8 +105,7 @@ class ViewController: UIViewController {
         currentImage.hidden = false
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
-        //print(auditoryStimuli[current].audioTrackName)
-        //print(visualStimuli[current].imageName)
+        //print(auditoryStimuli[current].audioTrackName," ",visualStimuli[current].imageName)
         //use dispatch async in future versions
         stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
         ratingTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
@@ -118,7 +118,6 @@ class ViewController: UIViewController {
         var other = Int(firstRandom)%c
         var another = random()%c
         for current in 0..<(c-1){
-            //let another = random()%c
             if(current != other){
                 swap(&visualStimuli[current], &visualStimuli[other])
             }
