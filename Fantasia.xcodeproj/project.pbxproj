@@ -27,15 +27,6 @@
 		1C63E3FC1CB6FFB500C0CD3B /* sad8.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 1C63E3E91CB6FFB500C0CD3B /* sad8.WAV */; };
 		1C63E3FD1CB6FFB500C0CD3B /* sad9.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 1C63E3EA1CB6FFB500C0CD3B /* sad9.WAV */; };
 		1C63E3FE1CB6FFB500C0CD3B /* sad10.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 1C63E3EB1CB6FFB500C0CD3B /* sad10.WAV */; };
-		1C9C9CFE1CBB2A3D00D9C1CB /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9CFD1CBB2A3D00D9C1CB /* Firebase.framework */; };
-		1C9C9D011CBB2A7800D9C1CB /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9CFF1CBB2A7800D9C1CB /* libicucore.A.tbd */; };
-		1C9C9D021CBB2A7800D9C1CB /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D001CBB2A7800D9C1CB /* libicucore.tbd */; };
-		1C9C9D061CBB2A8000D9C1CB /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D031CBB2A8000D9C1CB /* libc++.1.tbd */; };
-		1C9C9D071CBB2A8000D9C1CB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D041CBB2A8000D9C1CB /* libc++.tbd */; };
-		1C9C9D081CBB2A8000D9C1CB /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D051CBB2A8000D9C1CB /* libc++abi.tbd */; };
-		1C9C9D0A1CBB2A8D00D9C1CB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D091CBB2A8D00D9C1CB /* CFNetwork.framework */; };
-		1C9C9D0C1CBB2A9200D9C1CB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D0B1CBB2A9200D9C1CB /* Security.framework */; };
-		1C9C9D0E1CBB2A9A00D9C1CB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C9D0D1CBB2A9A00D9C1CB /* SystemConfiguration.framework */; };
 		1CB34C511CB987440089BE73 /* DemographicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB34C501CB987440089BE73 /* DemographicsViewController.swift */; };
 		1CB34C531CBAFDD00089BE73 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB34C521CBAFDD00089BE73 /* InstructionsViewController.swift */; };
 		1CB34C551CBB17BC0089BE73 /* examplePhoto.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1CB34C541CBB17BC0089BE73 /* examplePhoto.jpeg */; };
@@ -108,15 +99,6 @@
 		1C63E3E91CB6FFB500C0CD3B /* sad8.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sad8.WAV; sourceTree = "<group>"; };
 		1C63E3EA1CB6FFB500C0CD3B /* sad9.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sad9.WAV; sourceTree = "<group>"; };
 		1C63E3EB1CB6FFB500C0CD3B /* sad10.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sad10.WAV; sourceTree = "<group>"; };
-		1C9C9CFD1CBB2A3D00D9C1CB /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
-		1C9C9CFF1CBB2A7800D9C1CB /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
-		1C9C9D001CBB2A7800D9C1CB /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		1C9C9D031CBB2A8000D9C1CB /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
-		1C9C9D041CBB2A8000D9C1CB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		1C9C9D051CBB2A8000D9C1CB /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
-		1C9C9D091CBB2A8D00D9C1CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		1C9C9D0B1CBB2A9200D9C1CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		1C9C9D0D1CBB2A9A00D9C1CB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1CB34C501CB987440089BE73 /* DemographicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemographicsViewController.swift; sourceTree = "<group>"; };
 		1CB34C521CBAFDD00089BE73 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		1CB34C541CBB17BC0089BE73 /* examplePhoto.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = examplePhoto.jpeg; sourceTree = "<group>"; };
@@ -155,8 +137,6 @@
 		1CDDB78E1CB4BB8700B58D4C /* image17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image17.jpg; sourceTree = "<group>"; };
 		1CDDB78F1CB4BB8700B58D4C /* image18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image18.jpg; sourceTree = "<group>"; };
 		1CDDB7901CB4BB8700B58D4C /* image19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image19.jpg; sourceTree = "<group>"; };
-		6434FE8F919F442A7A61F134 /* Pods-Fantasia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantasia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fantasia/Pods-Fantasia.release.xcconfig"; sourceTree = "<group>"; };
-		8BE7308FAC44A22CA7021525 /* Pods-Fantasia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantasia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fantasia/Pods-Fantasia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,15 +144,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C9C9D0E1CBB2A9A00D9C1CB /* SystemConfiguration.framework in Frameworks */,
-				1C9C9D0C1CBB2A9200D9C1CB /* Security.framework in Frameworks */,
-				1C9C9D0A1CBB2A8D00D9C1CB /* CFNetwork.framework in Frameworks */,
-				1C9C9D061CBB2A8000D9C1CB /* libc++.1.tbd in Frameworks */,
-				1C9C9D071CBB2A8000D9C1CB /* libc++.tbd in Frameworks */,
-				1C9C9D081CBB2A8000D9C1CB /* libc++abi.tbd in Frameworks */,
-				1C9C9D011CBB2A7800D9C1CB /* libicucore.A.tbd in Frameworks */,
-				1C9C9D021CBB2A7800D9C1CB /* libicucore.tbd in Frameworks */,
-				1C9C9CFE1CBB2A3D00D9C1CB /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +164,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E761D3094790B8C3D319270 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1C9C9D0D1CBB2A9A00D9C1CB /* SystemConfiguration.framework */,
-				1C9C9D0B1CBB2A9200D9C1CB /* Security.framework */,
-				1C9C9D091CBB2A8D00D9C1CB /* CFNetwork.framework */,
-				1C9C9D031CBB2A8000D9C1CB /* libc++.1.tbd */,
-				1C9C9D041CBB2A8000D9C1CB /* libc++.tbd */,
-				1C9C9D051CBB2A8000D9C1CB /* libc++abi.tbd */,
-				1C9C9CFF1CBB2A7800D9C1CB /* libicucore.A.tbd */,
-				1C9C9D001CBB2A7800D9C1CB /* libicucore.tbd */,
-				1C9C9CFD1CBB2A3D00D9C1CB /* Firebase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		1C63E3FF1CB6FFC000C0CD3B /* MusicTracks */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +198,6 @@
 				1CDDB7471CB36FE700B58D4C /* FantasiaTests */,
 				1CDDB7521CB36FE700B58D4C /* FantasiaUITests */,
 				1CDDB7311CB36FE600B58D4C /* Products */,
-				9C59672187AF873CE5FF68C7 /* Pods */,
-				0E761D3094790B8C3D319270 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,15 +276,6 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		9C59672187AF873CE5FF68C7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8BE7308FAC44A22CA7021525 /* Pods-Fantasia.debug.xcconfig */,
-				6434FE8F919F442A7A61F134 /* Pods-Fantasia.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,12 +283,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CDDB7581CB36FE700B58D4C /* Build configuration list for PBXNativeTarget "Fantasia" */;
 			buildPhases = (
-				2217BBDB8700CD6468A4DDB9 /* Check Pods Manifest.lock */,
 				1CDDB72C1CB36FE600B58D4C /* Sources */,
 				1CDDB72D1CB36FE600B58D4C /* Frameworks */,
 				1CDDB72E1CB36FE600B58D4C /* Resources */,
-				7E07B7BFC394DCE074FC9958 /* Embed Pods Frameworks */,
-				AA0030B4AD9E2716007B1BAF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -505,54 +446,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2217BBDB8700CD6468A4DDB9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7E07B7BFC394DCE074FC9958 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fantasia/Pods-Fantasia-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA0030B4AD9E2716007B1BAF /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fantasia/Pods-Fantasia-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1CDDB72C1CB36FE600B58D4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -701,34 +594,11 @@
 		};
 		1CDDB7591CB36FE700B58D4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BE7308FAC44A22CA7021525 /* Pods-Fantasia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Fantasia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Firebase\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"Firebase\"",
-					"-l\"FirebaseStatic\"",
-					"-l\"c++\"",
-					"-l\"icucore\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.Fantasia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -736,34 +606,11 @@
 		};
 		1CDDB75A1CB36FE700B58D4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6434FE8F919F442A7A61F134 /* Pods-Fantasia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Fantasia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Firebase\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"Firebase\"",
-					"-l\"FirebaseStatic\"",
-					"-l\"c++\"",
-					"-l\"icucore\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sinclair.Fantasia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

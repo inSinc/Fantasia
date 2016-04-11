@@ -6,7 +6,6 @@
 //  Copyright © 2016 Sinclair. All rights reserved.
 
 import UIKit
-import Firebase
 
 var visualStimuli = [VisualStimulus]()
 var auditoryStimuli = [AuditoryStimulus]()
@@ -142,10 +141,6 @@ class ViewController: UIViewController {
             userRatings.append(visualStimuli[i].userImageRating)
             print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
         }
-        // Create a reference to a Firebase location
-        let myRootRef = Firebase(url:"https://<fantasia>.firebaseio.com")
-        // Write data to Firebase
-        myRootRef.setValue("Hello World!")
     }
 
     override func didReceiveMemoryWarning() {
