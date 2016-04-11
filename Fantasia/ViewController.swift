@@ -145,7 +145,7 @@ class ViewController: UIViewController {
         // Create a reference to a Firebase location
         let myRootRef = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
         // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        myRootRef.setValue("\(sex) \(age) \(musicalExperience)")
         
     }
 
