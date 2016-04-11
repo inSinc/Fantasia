@@ -15,7 +15,7 @@ import UIKit
 var sex:String = String()
 var age:Int = Int()
 var musicalExperience:String = String()
-var stimuliTimeOverride = -1
+var stimuliTimeOverride = -1 //used to test
 
 class DemographicsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var welcomeLabel: UILabel!
