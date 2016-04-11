@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var current = 0
     var stimuliTime = 2.0
     var numberOfStimuli = 20
+    var firebaseRoot = Firebase()
     
     @IBOutlet weak var finishLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
@@ -66,6 +67,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
+        //establishing firebase root
+        firebaseRoot = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
         //load visual & auditory stimuli
         for i in 0..<numberOfStimuli{
             visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
@@ -142,11 +145,13 @@ class ViewController: UIViewController {
             userRatings.append(visualStimuli[i].userImageRating)
             print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
         }
-        // Create a reference to a Firebase location
-        let myRootRef = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
-        // Write data to Firebase
-        myRootRef.setValue("\(sex) \(age) \(musicalExperience)")
         
+        var toUpload = ["sex":"\(sex)", "age":"\(age)", "musicalExperience":"\(musicalExperience)"]
+        for i in 0..<numberOfStimuli{
+            toUpload["\(i)"] = "\(auditoryStimuli[i].audioTrackName) \(visualStimuli[i].imageName) \(visualStimuli[i].userImageRating)"
+        }
+        let newReference = firebaseRoot.childByAutoId()
+        newReference.setValue(toUpload)
     }
 
     override func didReceiveMemoryWarning() {
