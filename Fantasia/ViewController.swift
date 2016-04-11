@@ -10,7 +10,6 @@ import Firebase
 
 var visualStimuli = [VisualStimulus]()
 var auditoryStimuli = [AuditoryStimulus]()
-var loadedStimuli = false
 
 func save(){
     NSUserDefaults.standardUserDefaults().setObject(visualStimuli, forKey: "visualStimuli")
@@ -71,17 +70,14 @@ class ViewController: UIViewController {
         //establishing firebase root
         firebaseRoot = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
         //load visual & auditory stimuli
-        if !loadedStimuli{
-            for i in 0..<numberOfStimuli{
-                visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
-            }
-            for i in 1...numberOfStimuli/2{
-                auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))
-                auditoryStimuli.append(AuditoryStimulus(audioTrackName: "sad\(i)"))
-            }
-            //print("LOADED STIMULI")
-            loadedStimuli = true
+        for i in 0..<numberOfStimuli{
+            visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
         }
+        for i in 1...numberOfStimuli/2{
+            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))
+            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "sad\(i)"))
+        }
+        //print("LOADED STIMULI")
         if stimuliTimeOverride >= 0 && stimuliTimeOverride < 10 {
             stimuliTime = Double(stimuliTimeOverride)
         }
@@ -120,12 +116,16 @@ class ViewController: UIViewController {
     func shuffle(firstRandom:Double){
         let c = visualStimuli.count
         var other = Int(firstRandom)%c
+        var another = random()%c
         for current in 0..<(c-1){
             //let another = random()%c
             if(current != other){
                 swap(&visualStimuli[current], &visualStimuli[other])
-                swap(&auditoryStimuli[current], &auditoryStimuli[other])
             }
+            if(current != another){
+                swap(&auditoryStimuli[current], &auditoryStimuli[another])
+            }
+            another = random()%c
             other = random()%c
         }
     }
