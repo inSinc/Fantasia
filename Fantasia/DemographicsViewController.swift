@@ -15,10 +15,12 @@ import UIKit
 var sex:String = String()
 var age:Int = Int()
 var musicalExperience:String = String()
+var stimuliTimeOverride = -1
 
 class DemographicsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var welcomeLabel: UILabel!
 
+    @IBOutlet weak var stimuliTime: UITextField!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var musicalExperienceLabel: UILabel!
@@ -33,6 +35,9 @@ class DemographicsViewController: UIViewController, UITextFieldDelegate {
             age = Int(ageInputField.text!)!
             musicalExperience = musicalExperienceInput.titleForSegmentAtIndex(musicalExperienceInput.selectedSegmentIndex)!
             //print("Sex: \(sex) Age: \(age) Musical Experience: \(musicalExperience)")
+            if stimuliTime.text?.isEmpty != true{
+                stimuliTimeOverride = Int(stimuliTime.text!)!
+            }
             self.performSegueWithIdentifier("toInstructions", sender: nil)
         }else{
             instructionLabel.textColor = UIColor.redColor()
@@ -44,6 +49,7 @@ class DemographicsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
+        stimuliTimeOverride = -1
         ageInputField.backgroundColor = UIColor.blackColor()
         ageInputField.borderStyle = UITextBorderStyle.Line
         ageInputField.layer.cornerRadius = 6.0;

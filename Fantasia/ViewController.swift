@@ -10,6 +10,7 @@ import Firebase
 
 var visualStimuli = [VisualStimulus]()
 var auditoryStimuli = [AuditoryStimulus]()
+var loadedStimuli = false
 
 func save(){
     NSUserDefaults.standardUserDefaults().setObject(visualStimuli, forKey: "visualStimuli")
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
     var stimuliTimer = NSTimer()
     var ratingTimer = NSTimer()
     var current = 0
-    var stimuliTime = 2.0
+    var stimuliTime = 5.0
     var numberOfStimuli = 20
     var firebaseRoot = Firebase()
     
@@ -40,8 +41,8 @@ class ViewController: UIViewController {
     
     @IBAction func ratingSlider(sender: AnyObject) {
         visualStimuli[current].userImageRating = ratingSlider.value
-        print(ratingSlider.value)
-        print("Name: \(visualStimuli[current].imageName) Post-rating: \(visualStimuli[current].userImageRating)")
+        //print(ratingSlider.value)
+        //print("Name: \(visualStimuli[current].imageName) Post-rating: \(visualStimuli[current].userImageRating)")
         current++
         happyFace.hidden = true
         sadFace.hidden = true
@@ -70,12 +71,19 @@ class ViewController: UIViewController {
         //establishing firebase root
         firebaseRoot = Firebase(url:"https://glowing-torch-3672.firebaseio.com/")
         //load visual & auditory stimuli
-        for i in 0..<numberOfStimuli{
-            visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
+        if !loadedStimuli{
+            for i in 0..<numberOfStimuli{
+                visualStimuli.append(VisualStimulus(imageName: "image\(i)"))
+            }
+            for i in 1...numberOfStimuli/2{
+                auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))
+                auditoryStimuli.append(AuditoryStimulus(audioTrackName: "sad\(i)"))
+            }
+            //print("LOADED STIMULI")
+            loadedStimuli = true
         }
-        for i in 1...numberOfStimuli/2{
-            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "happy\(i)"))
-            auditoryStimuli.append(AuditoryStimulus(audioTrackName: "sad\(i)"))
+        if stimuliTimeOverride > 0 && stimuliTimeOverride < 10 {
+            stimuliTime = Double(stimuliTimeOverride)
         }
         finishLabel.alpha = 0.0
         load()
@@ -85,7 +93,7 @@ class ViewController: UIViewController {
     }
     
     func load(){
-        current = 19
+        current = 0
         for i in 0..<numberOfStimuli{
             visualStimuli[i].userImageRating = -1000
         }
@@ -100,11 +108,11 @@ class ViewController: UIViewController {
         currentImage.hidden = false
         currentImage.image = visualStimuli[current].image
         auditoryStimuli[current].player.play()
-        print(auditoryStimuli[current].audioTrackName)
+        //print(auditoryStimuli[current].audioTrackName)
         //use dispatch async in future versions
         stimuliTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("stopStimuli"), userInfo: nil, repeats: false)
         ratingTimer = NSTimer.scheduledTimerWithTimeInterval(stimuliTime, target: self, selector: Selector("showRating"), userInfo: nil, repeats: false)
-        print("Pre-rating: \(visualStimuli[current].userImageRating)")
+        //print("Pre-rating: \(visualStimuli[current].userImageRating)")
     }
     
     //shuffle/randomize stimuli
@@ -143,7 +151,7 @@ class ViewController: UIViewController {
             audioNames.append(auditoryStimuli[i].audioTrackName)
             visualNames.append(visualStimuli[i].imageName)
             userRatings.append(visualStimuli[i].userImageRating)
-            print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
+            //print("\(audioNames[i]) \(visualNames[i]) \(userRatings[i])")
         }
         
         var toUpload = ["sex":"\(sex)", "age":"\(age)", "musicalExperience":"\(musicalExperience)"]

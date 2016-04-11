@@ -90,10 +90,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mig-aZ-rPd">
+                                <rect key="frame" x="530" y="28" width="50" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QbQ-VY-0eL"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7LA-Ei-ffw" firstAttribute="top" secondItem="z3R-Li-Ham" secondAttribute="bottom" constant="30" id="19b-Yx-3cY"/>
+                            <constraint firstItem="Mig-aZ-rPd" firstAttribute="top" secondItem="zu6-Xz-pjd" secondAttribute="bottom" constant="8" id="4eD-H2-Qp5"/>
                             <constraint firstItem="z3R-Li-Ham" firstAttribute="top" secondItem="q3N-sH-wwf" secondAttribute="bottom" constant="1" id="6Q5-dT-aiW"/>
                             <constraint firstItem="t32-AV-roi" firstAttribute="top" secondItem="zu6-Xz-pjd" secondAttribute="bottom" constant="18" id="73P-YK-rb1"/>
                             <constraint firstItem="t32-AV-roi" firstAttribute="centerX" secondItem="3Je-wI-L9S" secondAttribute="centerX" id="GtT-EA-iTf"/>
@@ -106,6 +117,7 @@
                             <constraint firstItem="q3N-sH-wwf" firstAttribute="centerX" secondItem="t32-AV-roi" secondAttribute="centerX" id="RqA-Y1-2Xm"/>
                             <constraint firstItem="vas-Q3-Wzo" firstAttribute="top" secondItem="nGK-7J-PHU" secondAttribute="bottom" constant="30" id="XCq-bw-4QJ"/>
                             <constraint firstItem="q3N-sH-wwf" firstAttribute="top" secondItem="JbB-GB-Ouw" secondAttribute="bottom" constant="30" id="YSl-te-liU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mig-aZ-rPd" secondAttribute="trailing" id="Zyd-Px-SF4"/>
                             <constraint firstItem="XOU-DZ-Suv" firstAttribute="top" secondItem="nGK-7J-PHU" secondAttribute="bottom" constant="30" id="e4Q-3a-ILZ"/>
                             <constraint firstItem="vas-Q3-Wzo" firstAttribute="centerX" secondItem="3Je-wI-L9S" secondAttribute="centerX" id="eWR-vu-AVi"/>
                             <constraint firstItem="t7e-F4-6Vx" firstAttribute="centerX" secondItem="3Je-wI-L9S" secondAttribute="centerX" id="isA-XG-WGg"/>
@@ -129,6 +141,7 @@
                         <outlet property="musicalExperienceLabel" destination="XOU-DZ-Suv" id="KHU-yd-kw7"/>
                         <outlet property="sexInputField" destination="z3R-Li-Ham" id="R3W-tA-FDx"/>
                         <outlet property="sexLabel" destination="q3N-sH-wwf" id="0Pu-CM-WdE"/>
+                        <outlet property="stimuliTime" destination="Mig-aZ-rPd" id="dRm-np-2CM"/>
                         <outlet property="submitButton" destination="t7e-F4-6Vx" id="ypG-b6-8WU"/>
                         <outlet property="welcomeLabel" destination="t32-AV-roi" id="Xi0-sy-Gxk"/>
                         <segue destination="Q6m-a0-boY" kind="modal" identifier="toInstructions" modalTransitionStyle="crossDissolve" id="F0c-zi-egU"/>
@@ -282,6 +295,7 @@
                                 </state>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUl-RN-afP"/>
+                                    <segue destination="0g4-rH-Z8b" kind="modal" modalTransitionStyle="crossDissolve" id="S5m-Gi-yJw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results have been uploaded." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJV-NY-682">
@@ -363,4 +377,7 @@
         <image name="happy" width="38" height="38"/>
         <image name="sad" width="38" height="38"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="S5m-Gi-yJw"/>
+    </inferredMetricsTieBreakers>
 </document>
